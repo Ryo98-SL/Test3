@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import com.mysql.jdbc.Connection;
 
 
-public class JDBCBlobDemo { //bbb
+public class JDBCBlobDemo { //bbb+aa
 	private static final String URL ="jdbc:mysql://localhost:3306/demo";
 	private static final String USERNAME ="root"; //姓名：舒德亮
 	private static final String PWD ="123456" ; //学号:170201048
