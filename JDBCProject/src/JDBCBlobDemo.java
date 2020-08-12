@@ -11,10 +11,10 @@ import java.sql.SQLException;
 import com.mysql.jdbc.Connection;
 
 
-public class JDBCBlobDemo {
+public class JDBCBlobDemo { //
 	private static final String URL ="jdbc:mysql://localhost:3306/demo";
-	private static final String USERNAME ="root"; //ĞÕÃû£ºÊæµÂÁÁ
-	private static final String PWD ="123456" ; //Ñ§ºÅ:170201048
+	private static final String USERNAME ="root"; //å§“åï¼šèˆ’å¾·äº®
+	private static final String PWD ="123456" ; //å­¦å·:170201048
 
 	
 public static void BlobDemo() {
@@ -27,7 +27,7 @@ public static void BlobDemo() {
 	String sql="insert into mymusic values(?,?)";
 	  pstmt =  (PreparedStatement) connection.prepareStatement(sql);
 	 pstmt.setInt(1,1);
-	 File file = new File("d:\\ÊæµÂÁÁ170201048.mp3");
+	 File file = new File("d:\\èˆ’å¾·äº®170201048.mp3");
 	 InputStream in =new FileInputStream(file);
 	 pstmt.setBinaryStream(2,in,(int)file.length());
 	 
@@ -35,7 +35,7 @@ public static void BlobDemo() {
 	 
 	 int count = pstmt.executeUpdate();
 	if(count>0) {
-		System.out.println("²Ù×÷³É¹¦£¡");
+		System.out.println("æ“ä½œæˆåŠŸï¼");
 	}
 	in.close();
 	}catch(ClassNotFoundException e) {
@@ -68,7 +68,7 @@ public static void BlobReaderDemo() {
 	 if(rs.next())
 	 {
 		InputStream in= rs.getBinaryStream("music");
-	    OutputStream out = new FileOutputStream("src/ÊæµÂÁÁ170201048.mp3");
+	    OutputStream out = new FileOutputStream("src/èˆ’å¾·äº®170201048.mp3");
 	    byte[] chs = new byte[100];
 	    int len=-1;
 	    while((len=in.read(chs))!=-1) {
